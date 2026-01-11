@@ -1,4 +1,4 @@
-# Market Sentiment Macro Geopolitical Signal Prediction
+# Market Sentiment & Macro Geopolitical Signal Prediction
 Built an end-to-end quantitative pipeline combining FinBERT-based news sentiment and GDELT macro geopolitical indicators to study short-horizon equity market direction using time-series machine learning.
 
 OBJECTIVE: This project builds an end-to-end quantitative research pipeline to examine whether financial news sentiment and macro–geopolitical signals contain predictive information about short-term equity market movements.
