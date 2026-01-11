@@ -1,11 +1,14 @@
 # Market Sentiment & Macro Geopolitical Signal Modeling
 Built an end-to-end quantitative pipeline combining FinBERT-based news sentiment and GDELT macro–geopolitical indicators to study short-horizon equity market direction using time-series machine learning.
 
+
 OBJECTIVE: This project builds an end-to-end quantitative research pipeline to examine whether financial news sentiment and macro–geopolitical signals contain predictive information about short-term equity market movements.
 
 It combines large-scale news sentiment analysis (FinBERT, VADER, TextBlob) with geopolitical event data (GDELT) and applies time-series aware machine learning models to predict market direction under different volatility and regime conditions.
 
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 PROJECT HIGHLIGHTS:
 
@@ -16,12 +19,11 @@ Built a multi-stage pipeline covering:
 3. Market return alignment (IVV / S&P 500)
 4. Macro–geopolitical signal modeling (GDELT)
 
-
 5. Implemented three sentiment models:
    
-   a. VADER
-   b. TextBlob
-   c. FinBERT (ProsusAI)
+a. VADER
+b. TextBlob
+c. FinBERT (ProsusAI)
 
 7. Developed lagged and regime-filtered signals to reduce noise
 8. Applied time-series cross-validation to avoid look-ahead bias
@@ -29,7 +31,9 @@ Built a multi-stage pipeline covering:
 10. Evaluated models using directional accuracy, not just raw returns
 11. Identified high-confidence market signal days during conflict-driven regimes
 
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 PROBLEM STATEMENT:
 
@@ -43,11 +47,13 @@ Financial markets react not only to fundamentals but also to:
 
 However, news and macro data are noisy, and naive models often fail due to look-ahead bias and regime changes.
 
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 GOAL OF THIS PROJECT: To test whether lagged sentiment and macro geopolitical indicators can help predict next-day market direction, especially during high-volatility and stress periods.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 DATA SOURCES: 
 
@@ -71,7 +77,9 @@ c. Protest & conflict activity
 d. Government-related events
 e. Media attention & tone
 
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 DATA EXTRACTION USING GOOGLE BIGQUERY:
 Macro–geopolitical data used in this project was sourced from the GDELT database, accessed via Google BigQuery. BigQuery was used to efficiently query, aggregate, and export large-scale historical event data that would be impractical to process locally due to size and complexity.
@@ -100,7 +108,9 @@ The following datasets were extracted using SQL queries executed directly in Big
    
 Query results were exported from BigQuery as CSV files and subsequently ingested into the Python pipeline for preprocessing, feature engineering, and modeling. All data processing steps ensured temporal integrity, with macro features lagged appropriately to prevent data leakage and look-ahead bias.
 
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 FEATURE ENGINEERING:
 
@@ -123,7 +133,9 @@ B. MACRO FEATURES (LAGGED):
 
 All features are shifted appropriately to prevent data leakage and look-ahead bias.
 
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 MODELS USED: 
 
@@ -147,7 +159,9 @@ a. Captures non-linear interactions between macro signals
 b. Robust to noisy geopolitical and media driven indicators
 c. Feature importance analysis included for interpretability
 
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 EVALUATION AND RESULTS:
 
@@ -176,3 +190,5 @@ GRAPH: This graph summarizes the project by combining S&P 500 price dynamics wit
 
 
 (⚠️ DISCLAIMER: This project is for academic and research purposes only and does not constitute financial advice.)
+
+
